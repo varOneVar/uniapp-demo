@@ -2,7 +2,9 @@ import Vue from 'vue'
 import store from './store'
 import App from './App'
 
-import InstallApi from './common/api/index.js'
+import InstallApi from './api/index.js'
+import storage from './utils/storage.js'
+import goWhere from './utils/router.js'
 
 import Json from './Json' //测试用数据
 /**
@@ -46,6 +48,8 @@ InstallApi(Vue)
 Vue.config.productionTip = false
 Vue.prototype.$fire = new Vue();
 Vue.prototype.$store = store;
+Vue.prototype.$goWhere = goWhere;
+Vue.prototype.$storage = storage;
 Vue.prototype.$api = {msg, json, prePage};
 
 App.mpType = 'app'
