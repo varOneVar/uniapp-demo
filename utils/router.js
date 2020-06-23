@@ -11,27 +11,27 @@ function goWhere(url = 1, type = 'push') {
 				animationType:'pop-in',
 			})
 			break;
-		},
+		}
 		case 'back': {
 			uni.navigateBack({
-				delta: url || 1
+				delta: url || 1,
 				animationDuration:200,
 				animationType:'pop-out',
 			})
 			break;
-		},
+		}
 		case 'replace': {
 			uni.redirectTo({
 				url,
 			})
 			break;
-		},
+		}
 		case 'navbar': {
 			uni.switchTo({
 				url,
 			})
 			break;
-		},
+		}
 		case 'reload': {
 			uni.reLaunch({
 				url,

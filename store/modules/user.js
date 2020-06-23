@@ -10,7 +10,7 @@ const mutations = {
 	},
 	CHANGE_TOKEN(state, obj = {}) {
 		state.userInfo = obj
-	}
+	},
 	RESET_USER_STATE(state) {
 		state.token = ''
 		state.userInfo = {}
@@ -21,7 +21,7 @@ const actions = {
 	
 }
 
-export default = {
+export default {
 	namespaced: true,
 	state,
 	mutations,

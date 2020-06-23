@@ -1,6 +1,6 @@
 export default function storage(sercet_key) {
 	return {
-		sercet_key: sercet_key || 'uniapp_demo'
+		sercet_key: sercet_key || 'uniapp_demo',
 		set(key, value) {
 			try{
 				const data = JSON.stringify(value)

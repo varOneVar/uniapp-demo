@@ -1,4 +1,4 @@
-import store from '../../store'
+import store from '../store/index.js'
 import constant from './constant.js'
 function getEnv(name = 'java') {
 	let env = {
@@ -29,7 +29,7 @@ function createRequest(url = '', method = 'GET', args = {}, config = {}) {
 				const { data, data: { code, msg } } = res;
 				if (code !== '0') {
 					uni.showToast({
-						title: msg || '操作失败！'
+						title: msg || '操作失败！',
 						icon:'none'
 					})
 				}
@@ -37,7 +37,7 @@ function createRequest(url = '', method = 'GET', args = {}, config = {}) {
 			},
 			fail(err) {
 				reject(err)
-			}
+			},
 			...config,
 		})
 	})
